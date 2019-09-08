@@ -3,14 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MyComponent } from './my/my.component';
-import { My2Component } from './my2/my2.component'; //регестрируем компонент
+import { CarsComponent } from './cars/cars.component';
+import { CarComponent } from './car/car.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyComponent,
-    My2Component// прописываем его тут
+    CarsComponent,
+    CarComponent
   ],
   imports: [
     BrowserModule,
