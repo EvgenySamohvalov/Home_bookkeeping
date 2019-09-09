@@ -9,10 +9,11 @@ export class CarsComponent {
   constructor() {
     
   }
+
+  
   addCarStatus = false;
   carName = '';
-  cars = ['Fort','Audi','BMW'];
-  items = [{id:3, name: 'item 1'}, {id:6, name: 'item 2'}, {id:9, name: 'item 3'}]
+  cars = ['Fort','Audi','BMW','Mersedes','Mazda', 'Lada'];
   
   addCar() {
     this.addCarStatus = true;
@@ -20,6 +21,10 @@ export class CarsComponent {
     // добавляем в массив cars значение из инпута с carName;
     this.carName = '';
     //  Очищаем значение carName;
+  }
+
+  setBigCarText (car: string) {
+    return car.length > 4 ? true : false;
   }
 
 
