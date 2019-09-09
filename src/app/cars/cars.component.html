@@ -7,4 +7,8 @@
 <hr>
 
 <input type="text" class="form-control" (keyup.enter)="onKeyUp($event)">
+<!-- [забираем данные из компонента в шаблон] -->
+<!-- (забираем данные из шаблона в компонент) -->
+<input type="text" class="form-control" [(ngModel)]="inputText">
+
 <p>{{inputText}}</p>
