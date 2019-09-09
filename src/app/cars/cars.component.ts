@@ -6,24 +6,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./cars.component.less']
 })
 export class CarsComponent {
+  carName = '';
+  carYear = 2017;
+
+  cars= [{
+    name: 'Ford',
+    year: 2015
+  }, {
+    name:'Mazda',
+    year: 2010
+  }, {
+    name:'Audi',
+    year: 2017
+  }];
+
   constructor() {
-    
   }
 
   
-  addCarStatus = false;
-  carName = '';
-  cars = ['Fort','Audi','BMW','Mersedes','Mazda', 'Lada'];
-  items = [
-    new Date(2015, 1, 2).toDateString(),
-    new Date(2011, 3, 4).toDateString(),
-    new Date(2017, 5, 3).toDateString(),
-    new Date(2000, 2, 5).toDateString(),
-  ]
-  
   addCar() {
-    this.addCarStatus = true;
-    this.cars.push(this.carName);
+    this.cars.push({
+      name: this.carName,
+      year: this.carYear
+    });
     this.carName = '';
+    this.carYear = 2017;
   }
 }
