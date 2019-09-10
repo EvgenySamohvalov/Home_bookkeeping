@@ -25,4 +25,8 @@ export class CarsComponent {
     this.cars.push(car);
   }
 
+  changeCarName() {
+    this.cars[0].name = 'New car name!';
+  }
+
 }
