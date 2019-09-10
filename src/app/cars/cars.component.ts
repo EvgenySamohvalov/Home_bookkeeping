@@ -6,10 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./cars.component.less']
 })
 export class CarsComponent {
-  carName = '';
-  carYear = 2017;
 
-  cars= [{
+  cars = [{
     name: 'Ford',
     year: 2015
   }, {
@@ -23,13 +21,8 @@ export class CarsComponent {
   constructor() {
   }
 
-  
-  addCar() {
-    this.cars.push({
-      name: this.carName,
-      year: this.carYear
-    });
-    this.carName = '';
-    this.carYear = 2017;
+  updateCarList(car: {name: string, year: number}) {
+    this.cars.push(car);
   }
+
 }

@@ -1,11 +1,6 @@
-<input type="text" class="form-control" [(ngModel)]="carName">
-<input type="text" class="form-control" [(ngModel)]="carYear">
-<button class="btn btn-primary" (click)="addCar()">Добавить машину</button>
+<app-add-car (onAddCar)="updateCarList($event)"></app-add-car>
 
 <hr>
-
-<!-- Первый способ байдинга -->
-<!-- [] -->
 
 <app-car *ngFor="let car of cars" [carItem]="car"></app-car>
 
