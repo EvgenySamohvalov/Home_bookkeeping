@@ -2,15 +2,28 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  template: `
+  <div class="col-xs-8 col-xs-offset-2">
+    <h2>{{name}}</h2>
+    <h2>{{name | lowercase}}</h2>
+    <h2>{{name | uppercase}}</h2>
+    <h2>{{name | slice:0:3}}</h2>
+  </div>
+  `
 })
 export class AppComponent {
-  headerText = 'Создание своей дерективы.';
-  items = [1, 2, 3, 4, 5, 6];
-  current = 1; // свойство по которому мы будем делать свич
-
-  onClick(number:number) {
-    this.current = number;
-  }
+  name = 'WebForMySelf';
+  pi = Math.PI;
+  money = 350;
+  data = new Date();
+  amount = 0.45;
+  object = {
+    foo: 'bar',
+    baz:'quz',
+    nested:
+    {
+      xyz:3,
+      numbers:[1, 2, 3]
+    }
+  };
 }
