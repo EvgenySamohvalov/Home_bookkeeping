@@ -1,10 +1,14 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component} from '@angular/core';
 import { NgForm } from '@angular/forms';
-
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  styles: [`
+    input.ng-invalid.ng-touched {
+      border: 1px solid red;
+    }
+  `]
 })
 export class AppComponent {
   answers = [{
@@ -15,11 +19,7 @@ export class AppComponent {
     text: 'Нет'
   }];
 
-  // submitForm(form: NgForm) {
-  //   console.log('Submited!', form);
-  // }
-
-  submitForm(form:NgForm) {
+  submitForm(form: NgForm) {
     console.log('Submited!', form);
   }
 }
