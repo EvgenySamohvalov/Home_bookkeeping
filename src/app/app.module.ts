@@ -4,11 +4,17 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { CarsPageComponent } from './cars-page/cars-page.component';
 import { CarsService } from './cars.service';
+
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomePageComponent,
+    CarsPageComponent
   ],
   imports: [
     BrowserModule,
