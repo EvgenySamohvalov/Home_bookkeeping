@@ -1,4 +1,7 @@
 {
+  "title": {
+    "value": "Менеджер машины"
+  },
   "cars": [
     {
       "name": "Volvo",

@@ -1,14 +1,29 @@
 import { Injectable } from "@angular/core";
-import { Http, Response } from "@angular/http";
-import { map } from "rxjs/operator/map";
+import { Http, Response, Headers } from "@angular/http";
+import { Observable } from "rxjs";
 
 @Injectable() 
 export class CarsService {
     constructor(private http: Http) {}
 
+    getAppTitle() {
+        return this.http.get('http://localhost:3000/title')
+        .delay(3000)
+        .map((response: Response) => response.json())
+        .map((data) => data.value);
+    }
+
     getCars() {
-        return this.http.get('http://localhost:3000/cars')
-        .map((response: Response) => response.json());
+        const headers = new Headers({
+            'Content-Type': 'application/json; charset=utf8'
+        })
+        return this.http.get('http://localhost:3000/cars',{
+            headers: headers
+        })
+        .map((response: Response) => response.json())
+        .catch((error:Response) => {
+            return Observable.throw('Сервер не доступен, попробуйте позже.');
+        })
     }
 
     addCar(carName: string) {
