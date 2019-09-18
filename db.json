@@ -1,11 +1,6 @@
 {
   "cars": [
     {
-      "name": "Ford",
-      "color": "grey",
-      "id": 1
-    },
-    {
       "name": "Volvo",
       "color": "green",
       "id": 2
@@ -14,11 +9,6 @@
       "name": "Bently",
       "color": "yellow",
       "id": 3
-    },
-    {
-      "name": "Mersedes",
-      "color": "pink",
-      "id": 4
     },
     {
       "name": "Reno",

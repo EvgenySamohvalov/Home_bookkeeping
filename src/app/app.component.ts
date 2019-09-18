@@ -55,6 +55,13 @@ export class AppComponent  {
     .subscribe((data) => {
       console.log(data);
     });
-    // нужно подписаться на изменение нашего стрима
+  }
+
+  deleteCar(car :Cars) {
+    this.carsService.deleteCar(car)
+    .subscribe((data) => {
+      this.cars = this.cars.filter((c => c.id !== car.id));
+      console.log(data);
+    }); 
   }
 }
