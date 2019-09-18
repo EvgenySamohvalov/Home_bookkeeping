@@ -13,6 +13,14 @@ interface Cars {
   templateUrl: './app.component.html'
 })
 export class AppComponent  {
+  colors = [
+    'red',
+    'blue',
+    'green',
+    'yellow',
+    'pink',
+    'grey'
+  ]
   cars: Cars[] = [];
   carName: string = '';
   constructor(private carsService: CarsService) {}
@@ -33,5 +41,20 @@ export class AppComponent  {
       this.cars.push(car);
     });
     this.carName = '';
+  }
+
+  getRandColor() {
+    const num = Math.round(Math.random() *(this.colors.length - 1));
+    // Выбираем рандомное число
+    return this.colors[num];
+    // Применяем это число.
+  }
+
+  setNewColor(car :Cars) {
+    this.carsService.changeColor(car, this.getRandColor())
+    .subscribe((data) => {
+      console.log(data);
+    });
+    // нужно подписаться на изменение нашего стрима
   }
 }
