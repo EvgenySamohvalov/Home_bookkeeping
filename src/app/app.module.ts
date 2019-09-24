@@ -10,6 +10,8 @@ import { CarsService } from './cars.service';
 import { AppRoutingModule } from './app-routing.module';
 import { CarPageComponent } from './car-page/car-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AuthService } from './auth.service';
+import { AuthGuard } from './auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [CarsService],
+  providers: [CarsService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
