@@ -1,29 +1,22 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import { CarsPageComponent } from "./cars-page.component";
-import { CarPageComponent } from "./car-page/car-page.component";
-import { CarsService } from "app/cars.service";
-import { CarsRoutingModule } from "./cars-routing.module";
-// import { ColorDirective } from "app/shared/color.directive";
-
+import { CarsPageComponent } from './cars-page.component';
+import { CarPageComponent } from './car-page/car-page.component';
+import { CarsService } from '../cars.service';
+import { CarsRoutingModule } from './cars-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-    // так как это сущность машин, нам нужно зарегестрирываь компоненты 
-    declarations:[
-        CarsPageComponent, 
-        CarPageComponent,
-        // зарегали два компонента
-        // ColorDirective
-    ],
-    imports: [
-        CommonModule,
-        CarsRoutingModule
-        // подключается для того что бы работали базовые дерективы, 
-        // но при этом он был более аптимизирован чем brawzer module
-    ],
-    // для коректной работы нужно кое что импортировать
-    providers:[CarsService]
-    // регаем сервис
+  declarations: [
+    CarsPageComponent,
+    CarPageComponent
+  ],
+  imports: [
+    CommonModule,
+    CarsRoutingModule,
+    SharedModule
+  ],
+  providers: [CarsService]
 })
 export class CarsModule {}
