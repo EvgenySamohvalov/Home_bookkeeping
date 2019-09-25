@@ -12,20 +12,20 @@ export class CarsService {
     {
       name: 'Audi',
       id: 2,
-      year: 2018,
+      year: 2010,
       color: 'blue'
     },
     {
       name: 'BMW',
       id: 3,
-      year: 2007,
-      color: 'black'
+      year: 2005,
+      color: 'yellow'
     },
     {
       name: 'Mercedes',
       id: 4,
       year: 2000,
-      color: 'green'
+      color: 'grey'
     }
   ]
 }
