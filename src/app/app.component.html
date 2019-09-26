@@ -1,14 +1,11 @@
 <button class="btn btn-primary" (click)="isVisible = !isVisible">Переключить</button>
 <hr>
-<!-- <div
-  [@divTrigger]="'show'"
+<div
+  @divTrigger
+  (@divTrigger.start)="onAnimationsStart($event)"
+  (@divTrigger.done)="onAnimationsDone($event)"
   class="alert alert-danger"
   *ngIf="isVisible"
 >
   Lorem ipsum dolor sit amet.
-</div>
-<hr> -->
-<div 
-  [@changeWidth]="isVisible ? 'a' : 'b'" 
-  style="height: 50px; width: 200px; background-color: red;">
 </div>

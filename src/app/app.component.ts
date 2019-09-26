@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { changeWidthTrigger, divTrigger } from './app.animations';
+import { AnimationEvent } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,12 @@ import { changeWidthTrigger, divTrigger } from './app.animations';
 })
 export class AppComponent {
   isVisible = false;
+
+  onAnimationsStart(event: AnimationEvent) {
+    console.log('start: ', event);
+  }
+
+  onAnimationsDone(event: AnimationEvent) {
+    console.log('start: ', event);
+  }
 }
