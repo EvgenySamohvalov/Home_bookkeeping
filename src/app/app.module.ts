@@ -1,20 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { CarComponent } from './car/car.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CarComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    BrowserAnimationsModule
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
