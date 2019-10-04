@@ -1,14 +1,14 @@
-import { Ng2CourseTheoryPage } from './app.po';
+import { HomeMoneyPage } from './app.po';
 
-describe('ng2-course-theory App', () => {
-  let page: Ng2CourseTheoryPage;
+describe('home-money App', () => {
+  let page: HomeMoneyPage;
 
   beforeEach(() => {
-    page = new Ng2CourseTheoryPage();
+    page = new HomeMoneyPage();
   });
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('wfm works!');
   });
 });
